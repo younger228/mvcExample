@@ -16,8 +16,6 @@ public class WhoController {
 	@MyRequestMapping("/im")
 	public void getUser(HttpServletRequest request, HttpServletResponse response,@MyRequestParam("name") String name){
 		try {
-			System.out.println(name);
-			response.setCharacterEncoding("utf-8");
 			response.getWriter().write("I'm "+name);
 		} catch (IOException e) {
 			e.printStackTrace();
